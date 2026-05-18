@@ -1,0 +1,110 @@
+.furniture {
+  padding: 48px 0;
+}
+
+.furniture-title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.2;
+  letter-spacing: 0.01em;
+  margin-bottom: 16px;
+}
+
+.furniture-categories-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-top: 40px;
+  padding: 0;
+  list-style: none;
+}
+
+@media (min-width: 768px) {
+  .furniture-categories-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .furniture-categories-grid {
+    grid-template-columns: repeat(7, 1fr);
+    gap: 24px;
+  }
+}
+
+/* ====================== КАРТОЧКА ====================== */
+.category-card {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  aspect-ratio: 4 / 3;
+  transition:
+    transform 300ms ease,
+    box-shadow 300ms ease;
+}
+
+/* Головне виправлення — масштабуємо весь card */
+.category-card:hover {
+  transform: scale(1.04) translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.18);
+}
+
+/* Зображення без scale */
+.category-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 400ms ease;
+  border-radius: 12px; /* на img */
+}
+
+.category-card:hover .category-img {
+  transform: scale(1.08);
+}
+
+/* Дуже важливий фікс */
+.category-card::before {
+  content: '';
+  position: absolute;
+  inset: -1px; /* трохи виходить за межі */
+  border-radius: 13px;
+  background: inherit;
+  z-index: -1;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+  pointer-events: none;
+}
+
+/* Overlay */
+.category-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.2) 40%,
+    rgba(0, 0, 0, 0.88) 85%
+  );
+  padding: 16px;
+  z-index: 2;
+}
+
+.category-name {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.35;
+  color: #fff;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+  text-align: center;
+  z-index: 3;
+}
+
+/* Активний стан */
+.category-card.active {
+  border: 3px solid #e74c3c;
+}
