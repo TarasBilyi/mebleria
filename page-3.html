@@ -5,28 +5,65 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Page 3</title>
-    <link rel="stylesheet" crossorigin href="/mebleria/assets/styles-DvPDDfy5.css">
+    <link rel="stylesheet" crossorigin href="/mebleria/assets/styles-DFpTRkf_.css">
   </head>
   <body>
     <header class="header">
   <div class="container">
-    <nav class="nav">
-      <a class="nav-logo" href="./index.html" aria-label="Site logo">
-        <svg class="nav-logo-icon" width="100" height="30">
-          <use href="/mebleria/assets/sprite-E8vg0sBb.svg#logo"></use>
-        </svg>
+    <nav class="header-nav">
+      <a href="./index.html" class="header-logo">
+        <img src="/mebleria/assets/logo-D_mlpf0C.svg" alt="Меблерія" class="header-logo-image" />
       </a>
-      <ul class="nav-list">
-        <li class="nav-item">
-          <a class="nav-link {=$highlight-act}" href="./page-2.html">Page 2</a>
+      <ul class="header-nav-list">
+        <li>
+          <a class="header-nav-link" href="#furniture">Наші меблі</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link active" href="./page-3.html">Page 3</a>
+        <li>
+          <a class="header-nav-link" href="#">Про нас</a>
+        </li>
+        <li>
+          <a class="header-nav-link" href="#">Часті запитання</a>
+        </li>
+        <li>
+          <a class="header-nav-link" href="#">Відгуки</a>
+        </li>
+        <li>
+          <a class="nav-btn-dark" href="#">До покупок</a>
         </li>
       </ul>
+      <button class="burger-menu" aria-label="Меню" data-menu-open>
+        <span class="burger-line"></span>
+        <span class="burger-line"></span>
+        <span class="burger-line"></span>
+      </button>
     </nav>
   </div>
 </header>
+
+<!-- Mobile Menu -->
+<div class="menu-overlay" data-menu-overlay>
+  <div class="container mobile-menu-wrapper">
+    <div class="mobile-menu" data-menu>
+      <ul class="mobile-nav-list">
+        <li>
+          <a class="mobile-nav-link" href="#furniture" data-menu-link
+            >Наші меблі</a
+          >
+        </li>
+        <li>
+          <a class="mobile-nav-link" href="#" data-menu-link>Про нас</a>
+        </li>
+        <li>
+          <a class="mobile-nav-link" href="#" data-menu-link>Часті запитання</a>
+        </li>
+        <li>
+          <a class="mobile-nav-link" href="#" data-menu-link>Відгуки</a>
+        </li>
+      </ul>
+      <a class="mobile-btn-dark" href="#" data-menu-link>До покупок</a>
+    </div>
+  </div>
+</div>
 
 
     <main>
